@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1d72b8;
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  padding: 0.6rem 1.2rem;
+  background: #1d72b8;
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.error {
+  color: #c0392b;
+  text-align: center;
+}
+
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-item {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.article-item .thumb {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-item .content {
+  padding: 1rem;
+  flex: 1;
+}
+
+.article-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.article-item h3 a {
+  text-decoration: none;
+  color: #1d72b8;
+}
+
+.article-item .meta {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.article-item .desc {
+  font-size: 0.95rem;
+  color: #555;
+}
