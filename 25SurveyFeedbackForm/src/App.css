@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.step-indicator {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #1db954;
+}
+
+.step label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.step input,
+.step select,
+.step textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.buttons button {
+  background: #1db954;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background: #169443;
+}
+
+.buttons button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.summary {
+  background: #f1f9f3;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.summary h2 {
+  margin-top: 0;
+  color: #1db954;
+}
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 12px;
+  height: 12px;
+  width: 100%;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background: #1db954;
+  height: 100%;
+  width: 0;
+  transition: width 0.4s ease;
+  border-radius: 12px 0 0 12px;
+}
+.toggle-btn {
+  background: #555;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #333;
+}
+
+.feedback-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.feedback-item {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.clear-btn {
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.clear-btn:hover {
+  background: #c9302c;
+}
