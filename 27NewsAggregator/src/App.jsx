@@ -2,10 +2,11 @@
 
 import './App.css'
 import React, { useEffect, useState } from "react";
+import "./App.css";
 import SearchBar from "./components/SearchBar";
 import ArticleList from "./components/ArticleList";
 
-const API_KEY = "c2231c16f4f04a89905a75faf1439f45";
+const API_KEY = import.meta.env.VITE_NEWSAPI_API_KEY;  // no extra semicolon
 const BASE_URL = "https://newsapi.org/v2";
 
 export default function App() {
@@ -17,11 +18,19 @@ export default function App() {
   const fetchNews = (q) => {
     setLoading(true);
     setError("");
-    fetch(
-      `${BASE_URL}/everything?q=${encodeURIComponent(q)}&pageSize=20&apiKey=${API_KEY}`
-    )
+
+    // build the URL once and reuse it
+    const url = `${BASE_URL}/everything` +
+                `?q=${encodeURIComponent(q)}` +
+                `&pageSize=20` +
+                `&apiKey=${API_KEY}`;
+
+    console.log("🔑 NewsAPI Key:", API_KEY);
+    console.log("Fetching news from:", url);
+
+    fetch(url)
       .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch news");
+        if (!res.ok) throw new Error(`NewsAPI error ${res.status}`);
         return res.json();
       })
       .then((data) => {
@@ -34,14 +43,13 @@ export default function App() {
       });
   };
 
-  
+  // initial load
   useEffect(() => {
     fetchNews(query);
-  }, []);
+  }, [query]);
 
   const handleSearch = (q) => {
-    setQuery(q);
-    fetchNews(q);
+    setQuery(q.trim() || "latest");
   };
 
   return (
@@ -56,6 +64,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
