@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1db954;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.job-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.job-item {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.job-item h3 {
+  margin: 0 0 0.3rem 0;
+  color: #222;
+}
+
+.company {
+  font-weight: 600;
+  color: #555;
+}
+
+.type {
+  display: inline-block;
+  background: #1db954;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin: 0.3rem 0;
+}
+
+.description {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.page-btn {
+  background: none;
+  border: 1px solid #1db954;
+  color: #1db954;
+  padding: 0.3rem 0.7rem;
+  margin: 0 0.15rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.page-btn:hover {
+  background-color: #1db954;
+  color: white;
+}
+
+.page-btn.active {
+  background-color: #1db954;
+  color: white;
+  cursor: default;
+}
+
+.error {
+  color: red;
+  font-weight: 700;
+  text-align: center;
+}
