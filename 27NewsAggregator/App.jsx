@@ -15,16 +15,17 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const fetchNews = (q) => {
+ const fetchNews = (q) => {
   setLoading(true);
   setError("");
 
   
-  const url = `${BASE_URL}/top-headlines`
-    + `?country=us`
-    + `&pageSize=20`
-    + `&q=${encodeURIComponent(q)}`
-    + `&apiKey=${API_KEY}`;
+  const url =
+    `${BASE_URL}/top-headlines` +       
+    `?country=us` +                    
+    (q ? `&q=${encodeURIComponent(q)}` : "") +  
+    `&pageSize=20` +                   
+    `&apiKey=${API_KEY}`;              
 
   console.log("Fetching news from:", url);
 
@@ -42,7 +43,6 @@ export default function App() {
       setLoading(false);
     });
 };
-
   
   useEffect(() => {
     fetchNews(query);
