@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.settings input {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.countdown h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.timer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.time-segment {
+  background: rgba(255,255,255,0.1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.value {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.unit {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.expired {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
